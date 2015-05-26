@@ -1,0 +1,218 @@
+<!-- fix positioning in exp date -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PaymentPageFragment">
+
+        <TextView android:text="PERSONAL INFORMATION" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personalInfo" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:ems="10"
+            android:id="@+id/name"
+            android:layout_below="@+id/personalInfo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="Address"
+            android:ems="15"
+            android:id="@+id/address"
+            android:layout_below="@+id/name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:hint="City"
+            android:ems="7"
+            android:layout_below="@+id/address"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/state"
+            android:hint="State"
+            android:ems="5"
+            android:layout_below="@+id/city"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Zip Code"
+            android:ems="10"
+            android:id="@+id/zip_code"
+            android:layout_below="@+id/state"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Phone Number"
+            android:ems="10"
+            android:id="@+id/phone"
+            android:layout_below="@+id/zip_code"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:ems="10"
+            android:id="@+id/email"
+            android:layout_below="@+id/phone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREDIT CARD INFORMATION"
+            android:id="@+id/credit_card_header"
+            android:layout_below="@+id/email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Full Name"
+            android:ems="10"
+            android:id="@+id/card_holder_name"
+            android:layout_below="@+id/credit_card_header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Card Number"
+            android:ems="10"
+            android:id="@+id/card_number"
+            android:layout_below="@+id/card_holder_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiration Date:"
+            android:id="@+id/exp_date_label"
+            android:paddingTop="14dp"
+            android:layout_alignTop="@+id/exp_month"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="MM"
+            android:ems="2"
+            android:id="@+id/exp_month"
+            android:layout_below="@+id/card_number"
+            android:layout_toRightOf="@+id/exp_date_label"
+            android:layout_toEndOf="@+id/exp_date_label" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="YY"
+            android:ems="2"
+            android:id="@+id/exp_year"
+            android:layout_below="@+id/card_number"
+            android:layout_toRightOf="@+id/exp_month"
+            android:layout_toEndOf="@+id/exp_month" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="CSC"
+            android:ems="10"
+            android:id="@+id/csc_num"
+            android:layout_below="@+id/exp_month"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="Billing Address"
+            android:ems="10"
+            android:id="@+id/billing_address"
+            android:layout_below="@+id/csc_num"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bill_city"
+            android:hint="City"
+            android:layout_below="@+id/billing_address"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Zip Code"
+            android:ems="10"
+            android:id="@+id/bill_zip_code"
+            android:layout_below="@+id/bill_city"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Person Payment"
+            android:id="@+id/in_person_pay"
+            android:layout_below="@+id/bill_zip_code"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:layout_below="@+id/bill_zip_code"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
